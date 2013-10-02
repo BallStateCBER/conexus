@@ -20,6 +20,7 @@
 	$this->Html->script('/DataCenter/js/jquery.svg.min.js', array('inline' => false));
 	$this->Html->script('/DataCenter/js/jquery.svgdom.min.js', array('inline' => false));
 	$this->Html->script('/DataCenter/js/jquery.qtip.min.js', array('inline' => false));
+	$this->Html->script('script', array('inline' => false));
 
 	// Being phased out in favor of HTML5 Google Charts
 	//$this->Html->script('gchart/jquery.gchart.min.js', array('inline' => false));
