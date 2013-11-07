@@ -93,7 +93,7 @@
 			</p>
 		</aside>
 		<div id="grade_graph_<?php echo $category_id; ?>">
-			<?php $this->GoogleChart->createJsChart($chart); ?>
+			<?php $this->GoogleCharts->createJsChart($chart); ?>
 		</div>
 		<p class="graph_note">
 			<strong>GPA Key</strong>:

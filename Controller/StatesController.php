@@ -1,6 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
-App::uses('GoogleChart', 'GoogleChart.Lib');
+App::uses('GoogleCharts', 'GoogleCharts.Lib');
 
 /**
  * States Controller
@@ -8,7 +8,7 @@ App::uses('GoogleChart', 'GoogleChart.Lib');
  * @property State $State
  */
 class StatesController extends AppController {
-	public $helpers = array('GoogleChart.GoogleChart');
+	public $helpers = array('GoogleCharts.GoogleCharts');
 	
 	public function view($abbreviation = null) {
 		$state = $this->State->find('first', array(
@@ -44,7 +44,7 @@ class StatesController extends AppController {
 		$charts = array();
 		foreach ($categories as $category) {
 			// Set up Google Chart
-			$chart = new GoogleChart();
+			$chart = new GoogleCharts();
 			$chart->type('LineChart');
 			$chart->options(array(
 				'title' => $state['State']['name'].' - '.$category['Category']['name'],
