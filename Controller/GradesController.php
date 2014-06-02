@@ -99,22 +99,22 @@ class GradesController extends AppController {
 		$this->Session->setFlash(__('Grade was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
-	
+
 	private function __import($year, $columns, $grades) {
 		$grades_split = explode("\n", $grades);
-		
+
 		App::uses('Category', 'Model');
 		$Category = new Category();
 		$categories = $Category->find('list');
-		
+
 		App::uses('State', 'Model');
 		$State = new State();
-		
+
 		$message = 'Importing grades:<table>';
 		foreach ($grades_split as $line) {
 			$line = trim($line);
 			if (empty($line)) {
-				continue;	
+				continue;
 			}
 			$line_split = explode("\t", $line);
 			$state_name = trim(array_shift($line_split));
@@ -126,12 +126,12 @@ class GradesController extends AppController {
 			foreach ($line_split as $i => $grade) {
 				$grade = trim($grade);
 				$category_id = $columns[$i];
-				
+
 				// Look for an existing entry for this grade
 				$search = $this->Grade->find('first', array('conditions' => compact(
 					'category_id', 'state_id', 'year'
 				)));
-				
+
 				if ($search) {
 					$result = 'Previously imported';
 				} else {
@@ -143,30 +143,102 @@ class GradesController extends AppController {
 					} else {
 						$result = 'Error importing';
 					}
-				}				
+				}
 				$message .= "<tr><td>$year</td><td>$state_name</td><td>$categories[$category_id] (#$category_id)</td><td>$grade</td><td>$result</td></tr>";
 			}
 		}
 		$this->set('message', $message.'</table>');
 		return $this->render('DataCenter.Common/message');
 	}
-	
-	public function import_2013() {
-		$year = 2013;
-		
-		// Category IDs corresponding to each column after state name in the $grades table 
+
+	public function import_2014() {
+		$year = 2014;
+
+		// Category IDs corresponding to each column after state name in the $grades table
 		$columns = array(
 			1, 	// Manufacturing Industry
 			2, 	// Logistics Industry
 			3, 	// Human Capital
 			4, 	// Benefits Costs
 			7, 	// Global Position
-			9, 	// Productivity and Innovation	
+			9, 	// Productivity and Innovation
 			5, 	// Tax Climate
 			8, 	// Diversification
 			6 	// Expected Fiscal Liability Gap
 		);
-		
+
+		// Data copied from Excel file
+		$grades = "
+			Alabama	B-	C	F	C+	B	C-	B-	B	C
+			Alaska	F	D	C+	F	D	F	B+	F	C-
+			Arizona	C	C-	D	B-	D-	C	B	D	D+
+			Arkansas	C	C	D-	A	C-	F	C-	C+	C
+			California	C	B	C-	C-	C	A	D	D-	D
+			Colorado	D+	D+	C+	B	D	B	C	C	C
+			Connecticut	B	D	C	D-	B+	B-	D-	D	C-
+			Delaware	D	D-	C-	F	A	C	B	C	A
+			Florida	D	C	C	C	D	D	A	B+	B-
+			Georgia	D+	B	D	A	B	C	C	A	A
+			Hawaii	F	F	C	D	F	F	C+	C-	D-
+			Idaho	C+	D	B	B	D	B	C	F	C+
+			Illinois	C	A	C	C	C+	A	D-	C	F
+			Indiana	A	A	C-	C	A	C+	A	C	C
+			Iowa	A	B	B	C	C	C-	F	C-	C
+			Kansas	B+	C	B-	B+	C-	C	C	C	C-
+			Kentucky	B	B+	D	D	A	D	C-	C+	F
+			Louisiana	C	B	F	D	B-	C	C	C-	C
+			Maine	C	D-	B	F	D	F	D+	C	C+
+			Maryland	D	D	C	C-	C	B	D+	C-	D
+			Massachusetts	C	D	C+	D	B	A	D	D	B-
+			Michigan	A	B-	D	C+	B	C	B	F	D+
+			Minnesota	C+	B	A	B	C	A	F	C	C
+			Mississippi	C+	C-	F	C	C	F	B	A	D-
+			Missouri	C	B	C	B	C	D-	A	A	B
+			Montana	F	C-	B+	C-	F	D-	A	C	F
+			Nebraska	C-	C	B+	B+	C-	C	C-	D+	B
+			Nevada	F	D	D+	A	D+	C-	B	D	C-
+			New Hampshire	B	F	A	C	C+	C+	C-	D	D
+			New Jersey	C	C+	C	C-	B-	B	F	D-	D-
+			New Mexico	D-	F	F	C	F	C+	C-	F	D
+			New York	F	C	C-	D+	C	C	F	B-	B+
+			North Carolina	B-	C+	C	C	B	B	D	B	A
+			North Dakota	D	C+	A	C+	C-	D	B	C-	D+
+			Ohio	B+	A	C	C	A	C	C	C+	C
+			Oklahoma	C-	C	D	B	D+	D+	C+	C	C
+			Oregon	A	C	C	C	D-	A	C	F	B
+			Pennsylvania	C	A	C	D	C	C	D	B+	B
+			Rhode Island	D	F	C-	D	F	D	F	B	D
+			South Carolina	A	C-	D-	C	A	C-	C	B	C
+			South Dakota	C-	D+	B	A	F	D	B	C	B
+			Tennessee	B	B+	D	B-	B+	C-	C	B	C+
+			Texas	C	A	D+	B	B	A	C	C	B
+			Utah	C	C-	B+	A	C	A	A	B-	A
+			Vermont	B	F	B	D-	C	C	D	D+	C
+			Virginia	D	C	C	D+	C	B	C+	A	C
+			Washington	C	C	A	F	C	A	C	A	A
+			West Virginia	C-	C	F	F	B-	D	C	C	F
+			Wisconsin	B+	B-	A	C	C	C	D	B	A
+			Wyoming	D-	C	B-	C-	D	D+	B+	D	C";
+
+		return $this->__import($year, $columns, $grades);
+	}
+
+	public function import_2013() {
+		$year = 2013;
+
+		// Category IDs corresponding to each column after state name in the $grades table
+		$columns = array(
+			1, 	// Manufacturing Industry
+			2, 	// Logistics Industry
+			3, 	// Human Capital
+			4, 	// Benefits Costs
+			7, 	// Global Position
+			9, 	// Productivity and Innovation
+			5, 	// Tax Climate
+			8, 	// Diversification
+			6 	// Expected Fiscal Liability Gap
+		);
+
 		// Data copied from Excel file
 		$grades = "
 			Alabama	B-	C	F	A	B	D	B	B	C
@@ -219,27 +291,27 @@ class GradesController extends AppController {
 			West Virginia	C-	C	F	D-	B	D	C	C-	F
 			Wisconsin	A	B-	B	D-	C	C	D+	C+	A
 			Wyoming	D	C	B	D	C-	D	B+	D	C";
-		
+
 		return $this->__import($year, $columns, $grades);
 	}
-	
+
 	public function import_2012() {
 		$year = 2012;
-		
-		// Category IDs corresponding to each column after state name in the $grades table 
+
+		// Category IDs corresponding to each column after state name in the $grades table
 		$columns = array(
 			1, 	// Manufacturing Industry
 			2, 	// Logistics Industry
 			3, 	// Human Capital
 			4, 	// Benefits Costs
 			7, 	// Global Position
-			9, 	// Productivity and Innovation	
+			9, 	// Productivity and Innovation
 			5, 	// Tax Climate
 			8, 	// Diversification
 			10, // Venture Capital Per capita
 			6 	// Expected Fiscal Liability Gap
 		);
-		
+
 		// Data copied from Excel file
 		$grades = "
 			Alabama	B-	C	F	B+	B	D	B	A	D-	C
@@ -293,28 +365,28 @@ class GradesController extends AppController {
 			Wisconsin	A	B-	B	D-	C	C	D+	C	C-	A
 			Wyoming	D-	C	B	D	C	D	B+	D	F	C+
 		";
-		
+
 		return $this->__import($year, $columns, $grades);
 	}
-	
+
 	public function import_2011() {
 		$year = 2011;
-		
-		// Category IDs corresponding to each column after state name in the $grades table 
+
+		// Category IDs corresponding to each column after state name in the $grades table
 		$columns = array(
 			1, 	// Manufacturing Industry
 			2, 	// Logistics Industry
 			3, 	// Human Capital
 			4, 	// Benefits Costs
 			7, 	// Global Position
-			9, 	// Productivity and Innovation	
+			9, 	// Productivity and Innovation
 			5, 	// Tax Climate
 			8, 	// Diversification
 			10	// Venture Capital Per capita
 		);
-		
+
 		// Data copied from Excel file
-		$grades = "		
+		$grades = "
 			Alabama	B	C	F	B+	B	C	B	B	F
 			Alaska	F	D	C-	C-	D	D	A	F	F
 			Arizona	C	C	D+	C	F	C	B	C-	C
@@ -366,28 +438,28 @@ class GradesController extends AppController {
 			Wisconsin	B+	B-	B+	D-	C	D-	C-	B-	C
 			Wyoming	D-	C	B+	C-	C-	B	B	D	C
 		";
-		
+
 		return $this->__import($year, $columns, $grades);
 	}
-	
+
 	public function import_2010() {
 		$year = 2010;
-		
-		// Category IDs corresponding to each column after state name in the $grades table 
+
+		// Category IDs corresponding to each column after state name in the $grades table
 		$columns = array(
 			1, 	// Manufacturing Industry
 			2, 	// Logistics Industry
 			3, 	// Human Capital
 			4, 	// Benefits Costs
 			7, 	// Global Position
-			9, 	// Productivity and Innovation	
+			9, 	// Productivity and Innovation
 			5, 	// Tax Climate
 			8, 	// Diversification
 			10	// Venture Capital Per capita
 		);
-		
+
 		// Data copied from Excel file
-		$grades = "	
+		$grades = "
 			Alabama	B	C	F	A	C+	C-	B	B	C-
 			Alaska	F	C-	D	D	C-	C-	B+	F	F
 			Arizona	C-	C-	C-	B+	F	C	B	D	C
@@ -439,27 +511,27 @@ class GradesController extends AppController {
 			Wisconsin	B+	C+	B+	F	C+	C-	C-	C+	D+
 			Wyoming	F	C	C	C	D	C	B	D+	F
 		";
-		
+
 		return $this->__import($year, $columns, $grades);
 	}
-	
+
 	public function import_2009() {
 		$year = 2009;
-		
-		// Category IDs corresponding to each column after state name in the $grades table 
+
+		// Category IDs corresponding to each column after state name in the $grades table
 		$columns = array(
 			1, 	// Manufacturing Industry
 			2, 	// Logistics Industry
 			3, 	// Human Capital
 			4, 	// Benefits Costs
 			7, 	// Global Position
-			9, 	// Productivity and Innovation	
+			9, 	// Productivity and Innovation
 			5	// Tax Climate
 		);
 		//
-		
+
 		// Data copied from Excel file
-		$grades = "	
+		$grades = "
 			Alabama	B	C	F	A	B	B+	B
 			Alaska	F	B	C	F	F	C	C+
 			Arizona	C	C	D	A	D	F	C
@@ -511,27 +583,27 @@ class GradesController extends AppController {
 			Wisconsin	B+	C	C+	C	B	D-	D
 			Wyoming	D-	B	A	C	F	B	B+
 		";
-		
+
 		return $this->__import($year, $columns, $grades);
 	}
-	
+
 	public function import_2008() {
 		$year = 2008;
-		
-		// Category IDs corresponding to each column after state name in the $grades table 
+
+		// Category IDs corresponding to each column after state name in the $grades table
 		$columns = array(
 			1, 	// Manufacturing Industry
 			2, 	// Logistics Industry
 			3, 	// Human Capital
 			4, 	// Benefits Costs
 			7, 	// Global Position
-			9, 	// Productivity and Innovation	
+			9, 	// Productivity and Innovation
 			5	// Tax Climate
 		);
 		//
-		
+
 		// Data copied from Excel file
-		$grades = "	
+		$grades = "
 			Alabama	B	C	F	A	B	B+	B
 			Alaska	F	B	C	F	F	C	C+
 			Arizona	C	C	D	A	D	F	C
@@ -583,7 +655,7 @@ class GradesController extends AppController {
 			Wisconsin	B+	C	C+	C	B	D-	D
 			Wyoming	D-	B	A	C	F	B	B+
 		";
-		
+
 		return $this->__import($year, $columns, $grades);
 	}
 }
