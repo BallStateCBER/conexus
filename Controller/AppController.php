@@ -32,15 +32,22 @@ App::uses('Controller', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	public $helpers = array('Js' => array('Jquery'), 'Html', 'Form');
-	public $components = array('DataCenter.Flash');
+	public $helpers = array(
+		'Js' => array('Jquery'),
+		'Html',
+		'Form'
+	);
+	public $components = array(
+		'DebugKit.Toolbar',
+		'DataCenter.Flash'
+	);
 	public $categories = array();
-	
+
 	function beforeFilter() {
 		App::uses('Category', 'Model');
 		$Category = new Category();
 		$this->categories = $Category->find('list');
-		
+
 		App::uses('State', 'Model');
 		$State = new State();
 		$this->states = $State->find('all', array(
@@ -48,13 +55,13 @@ class AppController extends Controller {
 			'contain' => false
 		));
 	}
-	
+
 	function beforeRender() {
 		if ($this->layout == 'default') {
 			$this->set(array(
 				'states_list' => $this->states,
 				'categories_list' => $this->categories
-			));	
+			));
 		}
 	}
 }
