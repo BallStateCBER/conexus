@@ -3,10 +3,10 @@
 	<?php foreach ($categories_list as $cat_id => $cat_name): ?>
 		<li>
 			<?php echo $this->Html->link(
-				$cat_name, 
+				$cat_name,
 				array(
-					'controller' => 'categories', 
-					'action' => 'view', 
+					'controller' => 'categories',
+					'action' => 'view',
 					'cat_slug' => Inflector::slug($cat_name)
 				)
 			); ?>
@@ -61,6 +61,9 @@
 	<h4>National Report Cards</h4>
 	<ul>
 		<li>
+			<?php echo $this->Html->link('2014', '/files/National2014.pdf'); ?>
+		</li>
+		<li>
 			<?php echo $this->Html->link('2013', '/files/National2013.pdf'); ?>
 		</li>
 		<li>
@@ -87,9 +90,12 @@
 			</ul>
 		</li>
 	</ul>
-	
+
 	<h4>Indiana Report Cards</h4>
 	<ul class="unstyled">
+		<li>
+			<?php echo $this->Html->link('2014 Indiana', '/files/Indiana2014.pdf'); ?>
+		</li>
 		<li>
 			<?php echo $this->Html->link('2013 Indiana', '/files/Indiana2013.pdf'); ?>
 		</li>

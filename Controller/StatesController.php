@@ -9,7 +9,7 @@ App::uses('GoogleCharts', 'GoogleCharts.Lib');
  */
 class StatesController extends AppController {
 	public $helpers = array('GoogleCharts.GoogleCharts');
-	
+
 	public function view($abbreviation = null) {
 		$state = $this->State->find('first', array(
 			'conditions' => array('State.abbreviation' => $abbreviation),
@@ -18,7 +18,7 @@ class StatesController extends AppController {
 		if (empty($state)) {
 			throw new NotFoundException(__('Invalid state'));
 		}
-		
+
 		$this->loadModel('Grade');
 		$grades = $this->Grade->find('all', array(
 			'conditions' => array('Grade.state_id' => $state['State']['id']),
@@ -33,13 +33,13 @@ class StatesController extends AppController {
 		}
 		$grades = $arranged_grades;
 		$grade_values = array('A' => 4, 'B' => 3, 'C' => 2, 'D' => 1, 'F' => 0);
-		
+
 		$this->loadModel('Category');
 		$categories = $this->Category->find('all', array(
 			'contain' => false,
 			'fields' => array('id', 'name', 'short_description')
 		));
-		
+
 		// Assumption: Each series is continuous (so no series will skip a year and then resume at a later year)
 		$charts = array();
 		foreach ($categories as $category) {
@@ -68,7 +68,7 @@ class StatesController extends AppController {
 					'label' => 'GPA'
 				)
 			));
-			
+
 			$category_id = $category['Category']['id'];
 			foreach ($grades[$category_id] as $year => &$grade) {
 				// Determine and assign numeric value for each grade
@@ -89,32 +89,32 @@ class StatesController extends AppController {
 			}
 			$charts[$category_id] = $chart;
 		}
-		
+
 		$this->set(compact('abbreviation', 'state', 'grades', 'categories', 'charts'));
 		$this->set(array(
 			'title_for_layout' => $state['State']['name'],
-			'years' => range(2013, 2009)
+			'years' => range(2014, 2009)
 		));
 	}
-	
+
 	/*
 	public function import_data() {
-		
+
 		// Columns:
-		// 		State	
-		// 		Population (2011)	
-		// 		Total Personal Income (in $1000s) - 2011	
-		// 		Manufacturing Earnings (in $1000s) - 2011	
+		// 		State
+		// 		Population (2011)
+		// 		Total Personal Income (in $1000s) - 2011
+		// 		Manufacturing Earnings (in $1000s) - 2011
 		// 		% Manufacturing share of economy - 2011
 		// Source: Bureau of Economic Analysis
-		
+
 		$columns = array(
 			'population',
 			'total_personal_income',
 			'manufacturing_earnings',
 			'manufacturing_share'
 		);
-		
+
 		$data = "
 			Alabama	4802740	166414200	14553748	8.7%
 			Alaska	722718	32904983	748279	2.3%
@@ -167,14 +167,14 @@ class StatesController extends AppController {
 			Wisconsin	5711767	228887665	32065201	14.0%
 			Wyoming	568158	26874672	793383	3.0%
 		";
-		
+
 		$data_split = explode("\n", $data);
-		
+
 		$message = 'Importing data:<table>';
 		foreach ($data_split as $line) {
 			$line = trim($line);
 			if (empty($line)) {
-				continue;	
+				continue;
 			}
 			$line_split = explode("\t", $line);
 			$state_name = trim(array_shift($line_split));

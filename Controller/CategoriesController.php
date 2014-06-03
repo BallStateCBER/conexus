@@ -21,9 +21,9 @@ class CategoriesController extends AppController {
 		if (!$this->Category->exists()) {
 			throw new NotFoundException(__('Invalid category'));
 		}
-		
-		$year = 2013;
-		
+
+		$year = 2014;
+
 		App::uses('Grade', 'Model');
 		$Grade = new Grade();
 		$grades = $Grade->find('all', array(
@@ -35,10 +35,10 @@ class CategoriesController extends AppController {
 		$js_grade_definitions = array();
 		foreach ($grades as $grade) {
 			$js_grade_definitions[] = $grade['State']['abbreviation'].": '".$grade['Grade']['grade']."'";
-			
+
 		}
 		$js_grade_definitions = implode(', ', $js_grade_definitions);
-		
+
 		$this->set(array(
 			'title_for_layout' => $this->Category->field('name'),
 			'category' => $this->Category->read(null, $id),
