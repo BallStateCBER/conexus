@@ -58,8 +58,10 @@
 
 <h3>Printed Reports (PDF)</h3>
 <section class="printed_reports">
-	<h4>National Report Cards</h4>
-	<ul>
+	<h4>
+		National Report Cards
+	</h4>
+	<ul class="inline">
 		<li>
 			<?php echo $this->Html->link('2014', '/files/National2014.pdf'); ?>
 		</li>
@@ -79,40 +81,49 @@
 			<?php echo $this->Html->link('2009', '/files/National2009.pdf'); ?>
 		</li>
 		<li>
-			2008
-			<ul>
-				<li>
-					<?php echo $this->Html->link('Analysis', '/files/National2008-1.pdf'); ?>
-				</li>
-				<li>
-					<?php echo $this->Html->link('Scorecard', '/files/National2008-2.pdf'); ?>
-				</li>
-			</ul>
+			<?php echo $this->Html->link('2008 Analysis', '/files/National2008-1.pdf'); ?>
+		</li>
+		<li>
+			<?php echo $this->Html->link('2008 Scorecard', '/files/National2008-2.pdf'); ?>
 		</li>
 	</ul>
 
-	<h4>Indiana Report Cards</h4>
-	<ul class="unstyled">
+	<h4>
+		Indiana Report Cards
+	</h4>
+	<ul class="inline">
 		<li>
-			<?php echo $this->Html->link('2014 Indiana', '/files/Indiana2014.pdf'); ?>
+			<?php echo $this->Html->link('2014', '/files/Indiana2014.pdf'); ?>
 		</li>
 		<li>
-			<?php echo $this->Html->link('2013 Indiana', '/files/Indiana2013.pdf'); ?>
+			<?php echo $this->Html->link('2013', '/files/Indiana2013.pdf'); ?>
 		</li>
 		<li>
-			<?php echo $this->Html->link('2012 Indiana', '/files/Indiana2012.pdf'); ?>
+			<?php echo $this->Html->link('2012', '/files/Indiana2012.pdf'); ?>
 		</li>
 		<li>
-			<?php echo $this->Html->link('2011 Indiana', '/files/Indiana2011.pdf'); ?>
+			<?php echo $this->Html->link('2011', '/files/Indiana2011.pdf'); ?>
 		</li>
 		<li>
-			<?php echo $this->Html->link('2010 Indiana', '/files/Indiana2010.pdf'); ?>
+			<?php echo $this->Html->link('2010', '/files/Indiana2010.pdf'); ?>
 		</li>
 		<li>
-			<?php echo $this->Html->link('2009 Indiana', '/files/Indiana2009.pdf'); ?>
+			<?php echo $this->Html->link('2009', '/files/Indiana2009.pdf'); ?>
 		</li>
 		<li>
-			<?php echo $this->Html->link('2008 Indiana', '/files/Indiana2008.pdf'); ?>
+			<?php echo $this->Html->link('2008', '/files/Indiana2008.pdf'); ?>
+		</li>
+	</ul>
+
+	<h4>
+		Related Studies
+	</h4>
+	<ul>
+		<li>
+			<?php echo $this->Html->link('Manufacturing and Labor Market Frictions (2014)', '/files/MfgLaborMktFrictions.pdf'); ?>
+		</li>
+		<li>
+			<?php echo $this->Html->link('Manufacturing Productivity Through the Great Recession (2013)', '/files/MfgProductivity2013.pdf'); ?>
 		</li>
 	</ul>
 </section>
