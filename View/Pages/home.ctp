@@ -1,39 +1,39 @@
 <h1 class="page_title">
-	Conexus Indiana 2013 Manufacturing and Logistics National Report
+	Conexus Indiana 2014 Manufacturing and Logistics National Report
 </h1>
 <p>
-	The 2013 Manufacturing and Logistics National Report shows how each state ranks among its peers in several areas of the economy that underlie the success of manufacturing and logistics. 
+	The 2014 Manufacturing and Logistics National Report shows how each state ranks among its peers in several areas of the economy that underlie the success of manufacturing and logistics.
 </p>
 <p>
 	These specific measures include: manufacturing and logistics industry health, human capital, cost of worker benefits, diversification of the industries, state-level productivity and innovation, expected fiscal liability, tax climate, and global reach.
 </p>
 
 <div id="downloads_screenshots">
-	<a href="/files/National2013.pdf">
-		<img src="/img/Nation2013.png" />
+	<a href="/files/National2014.pdf">
+		<img src="/img/Conexus2014-US.jpg" />
 		<br />
 		<span>
-			2013 National
+			2014 National
 			<br />
 			Report Card (PDF)
 		</span>
 	</a>
-	<a href="/files/Indiana2013.pdf">
-		<img src="/img/Indiana2013.png" />
+	<a href="/files/Indiana2014.pdf">
+		<img src="/img/Conexus2014-IN.jpg" />
 		<br />
 		<span>
-			2013 Indiana
+			2014 Indiana
 			<br />
 			Report Card (PDF)
 		</span>
 	</a>
-	<a href="/files/MfgProductivity2013.pdf">
-		<img src="/img/MfgProductivity2013.png" />
+	<a href="/files/MfgLaborMktFrictions.pdf">
+		<img src="/img/MfgLaborMktFrictions.jpg" />
 		<br />
 		<span>
-			Manufacturing Productivity Through
+			Manufacturing and Labor
 			<br />
-			the Great Recession (June 2013, PDF)
+			Market Frictions (June 2014, PDF)
 		</span>
 	</a>
 </div>
