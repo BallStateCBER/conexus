@@ -4,7 +4,7 @@ table.report_card {
 	tbody {
 		th {font-weight: normal; text-align: left;}
 		td {text-align: center;}
-		tr:nth-child(odd) {background-color: #ddd;}	
+		tr:nth-child(odd) {background-color: #ddd;}
 	}
 }
 .grade_graph {
@@ -24,15 +24,35 @@ aside.about_state {
 	h2 {margin: 0 0 15px 0;}
 }
 .printed_reports {
-	padding-left: 10px;
-	h4 {margin: 10px 0 0 0;}
-	h4:first-of-type {margin: 0;}
-	> ul {
-		margin: 0; padding: 0;
-		> li {list-style-type: none;}
-		ul {
-			margin: 0; padding: 0 0 0 20px;
-			li {display: inline;}
+	h4 {
+		margin: 10px 0 0 0;
+
+		&:first-of-type {
+			margin: 0;
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style-type: none;
+		}
+		&.inline {
+			li {
+				display: inline;
+
+				a {
+					display: inline-block;
+					margin: 0 2px;
+				}
+				&:after {
+					content: '\2022';
+				}
+				&:last-child:after {
+					content: '';
+				}
+			}
 		}
 	}
 }
@@ -44,7 +64,7 @@ ul.misc_links {margin-top: 20px;}
 
 #downloads_screenshots {
 	margin: 15px 0; text-align: center;
-	
+
 	a {display: inline-block; padding: 0 15px; text-decoration: none;}
 	img {border: 1px solid #aaa;}
 	a:hover img {
@@ -77,11 +97,11 @@ table.grades {
 		th {border-right: 1px solid #000000; text-align: left;}
 		td {text-align: center;}
 		td, th {border-bottom: 1px solid #999; padding: 0 2px;}
-	}	
+	}
 }
 #report_view_controls {
 	a {color: #000; margin-right: 15px; text-decoration: none;}
 	a:hover span {text-decoration: underline;}
 	a.selected span {text-decoration: underline;}
-	
+
 }
