@@ -36,6 +36,14 @@
 			Market Frictions (June 2014, PDF)
 		</span>
 	</a>
+	<a href="/files/EvaluatingMfgScorecard2014.pdf">
+		<img src="/img/EvaluatingMfgScorecard2014.jpg" />
+		<br />
+		<span>
+			Evaluating the Scorecard <br />
+			(June 2014, PDF)
+		</span>
+	</a>
 </div>
 
 
