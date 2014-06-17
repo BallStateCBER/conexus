@@ -56,10 +56,10 @@
 	</li>
 </ul>
 
-<h3>Printed Reports (PDF)</h3>
+<h3>Downloads</h3>
 <section class="printed_reports">
 	<h4>
-		National Report Cards
+		National Report Cards (PDF)
 	</h4>
 	<ul class="inline">
 		<li>
@@ -89,7 +89,7 @@
 	</ul>
 
 	<h4>
-		Indiana Report Cards
+		Indiana Report Cards (PDF)
 	</h4>
 	<ul class="inline">
 		<li>
@@ -116,7 +116,16 @@
 	</ul>
 
 	<h4>
-		Related Studies
+		Spreadsheets (XLSX)
+	</h4>
+	<ul class="inline">
+		<li>
+			<?php echo $this->Html->link('2014', '/files/Scorecard 2014.xlsx'); ?>
+		</li>
+	</ul>
+
+	<h4>
+		Related Studies (PDF)
 	</h4>
 	<ul>
 		<li>
