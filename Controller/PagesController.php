@@ -79,24 +79,24 @@ class PagesController extends AppController {
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->render(implode('/', $path));
 	}
-	
+
 	public function home() {
-		$this->set('title_for_layout', '');	
+		$this->set('title_for_layout', '');
 	}
-	
+
 	public function methodology() {
 		$this->set('title_for_layout', 'Methodology');
 	}
-	
+
 	public function data_sources() {
-		$this->set('title_for_layout', 'Data Sources');	
+		$this->set('title_for_layout', 'Data Sources');
 	}
-	
+
 	public function credits() {
-		$this->set('title_for_layout', 'Credits');	
+		$this->set('title_for_layout', 'Credits');
 	}
-	
+
 	public function glossary() {
-		$this->set('title_for_layout', 'Glossary');	
+		$this->set('title_for_layout', 'Glossary');
 	}
 }
