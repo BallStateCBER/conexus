@@ -175,7 +175,7 @@ class GradesController extends AppController {
 			Arkansas	C	C	D-	A	C	F	D	C+	D-
 			California	C	B	C	C	C	A	D	D	D
 			Colorado	D	C-	C+	B	D+	B	C	C	C-
-			Connecticut	B	D+	C+	F	B+	A	D	D	C-
+			Connecticut	B	C-	C+	F	B+	A	D	D	C-
 			Delaware	D	D-	C-	D	A	C	B	C	A
 			Florida	D	C	C	C	D	C	A	B+	B
 			Georgia	D+	B	D	A	B	C	C-	A	B+
@@ -186,7 +186,7 @@ class GradesController extends AppController {
 			Iowa	A	B+	B	C	C	C	D-	C	B
 			Kansas	A	B-	B-	B	C	C-	C	C-	D
 			Kentucky	B+	B	D	D	A	C	C	C	F
-			Louisiana	C	B	F	C+	C	D+	C	C-	C
+			Louisiana	C	B+	F	C+	C	D+	C	C-	C
 			Maine	C	F	B	F	D	F	D	C	C-
 			Maryland	D	D	C	C-	C	C	C	C-	C
 			Massachusetts	C-	D	C+	D+	B-	B+	D	D	D
@@ -195,7 +195,7 @@ class GradesController extends AppController {
 			Mississippi	B-	C-	F	C	D	D-	B	A	D-
 			Missouri	C	C+	C	B	C	D	A	A	B
 			Montana	F	C	B	C	F	D	A	C	D
-			Nebraska	C-	C+	A	B+	C-	C-	C-	D+	A
+			Nebraska	C-	C	A	B+	C-	C-	C-	D+	A
 			Nevada	F	D	D+	A	C	C	B	D	D
 			New Hampshire	B	F	A	C	B+	C	D+	D	C-
 			New Jersey	C-	B	C	C-	C+	B	F	D-	F
@@ -204,8 +204,8 @@ class GradesController extends AppController {
 			North Carolina	B-	C	C	B	B	B	C+	B	A
 			North Dakota	D	C+	A	C	D+	C-	B	C-	C
 			Ohio	B	A	C-	C	A	B	C	C+	C
-			Oklahoma	C	C	D	B-	C-	D-	B	C	C
-			Oregon	B	C-	C-	C	C-	B+	C	F	A
+			Oklahoma	C	C+	D	B-	C-	D-	B	C	C
+			Oregon	B	D+	C-	C	C-	B+	C	F	A
 			Pennsylvania	C	A	C	D-	C+	C	F	B+	D
 			Rhode Island	D+	F	C-	C-	D	C-	F	B	C
 			South Carolina	A	D+	D	D	A	C-	C-	B	C
