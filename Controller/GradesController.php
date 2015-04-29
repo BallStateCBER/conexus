@@ -128,16 +128,18 @@ class GradesController extends AppController {
 				$category_id = $columns[$i];
 
 				// Look for an existing entry for this grade
-				$search = $this->Grade->find('first', array('conditions' => compact(
-					'category_id', 'state_id', 'year'
-				)));
+				$count = $this->Grade->find('count',
+					array(
+						'conditions' => compact('category_id', 'state_id', 'year', 'grade')
+					)
+				);
 
-				if ($search) {
+				if ($count) {
 					$result = 'Previously imported';
 				} else {
-					$this->Grade->create(array('Grade' => compact(
-						'category_id', 'state_id', 'year', 'grade'
-					)));
+					$this->Grade->create(array(
+						'Grade' => compact('category_id', 'state_id', 'year', 'grade')
+					));
 					if ($this->Grade->save()) {
 						$result = 'Imported';
 					} else {
