@@ -169,58 +169,11 @@ class GradesController extends AppController {
 			6 	// Expected Fiscal Liability Gap
 		);
 
-		// Data copied from Excel file
-		$grades = "
-			Alabama	B	C	F	B-	B	C	C	B	B
-			Alaska	F	D	B	D-	F	F	B+	F	C-
-			Arizona	C	D	D-	C+	D	C+	B-	F	C
-			Arkansas	C	C	D-	A	C	F	D	C+	D-
-			California	C	B	C	C	C	A	D	D	D
-			Colorado	D	C-	C+	B	D+	B	C	C	C-
-			Connecticut	B	C-	C+	F	B+	A	D	D	C-
-			Delaware	D	D-	C-	D	A	C	B	C	A
-			Florida	D	C	C	C	D	C	A	B+	B
-			Georgia	D+	B	D	A	B	C	C-	A	B+
-			Hawaii	F	F	C	C-	D-	F	B	D+	F
-			Idaho	B-	D	C	B	F	D	C	F	C+
-			Illinois	C	A	C	C	C+	B	D-	C+	F
-			Indiana	A	A	C	D+	A	B-	A	C	B-
-			Iowa	A	B+	B	C	C	C	D-	C	B
-			Kansas	A	B-	B-	B	C	C-	C	C-	D
-			Kentucky	B+	B	D	D	A	C	C	C	F
-			Louisiana	C	B+	F	C+	C	D+	C	C-	C
-			Maine	C	F	B	F	D	F	D	C	C-
-			Maryland	D	D	C	C-	C	C	C	C-	C
-			Massachusetts	C-	D	C+	D+	B-	B+	D	D	D
-			Michigan	A	C	D	C+	B	A	C+	D-	D+
-			Minnesota	B-	B+	A	B	C	B	F	C	C+
-			Mississippi	B-	C-	F	C	D	D-	B	A	D-
-			Missouri	C	C+	C	B	C	D	A	A	B
-			Montana	F	C	B	C	F	D	A	C	D
-			Nebraska	C-	C	A	B+	C-	C-	C-	D+	A
-			Nevada	F	D	D+	A	C	C	B	D	D
-			New Hampshire	B	F	A	C	B+	C	D+	D	C-
-			New Jersey	C-	B	C	C-	C+	B	F	D-	F
-			New Mexico	F	F	F	C	F	D	C	F	D
-			New York	D-	C	C-	D	C-	C+	F	B-	C
-			North Carolina	B-	C	C	B	B	B	C+	B	A
-			North Dakota	D	C+	A	C	D+	C-	B	C-	C
-			Ohio	B	A	C-	C	A	B	C	C+	C
-			Oklahoma	C	C+	D	B-	C-	D-	B	C	C
-			Oregon	B	D+	C-	C	C-	B+	C	F	A
-			Pennsylvania	C	A	C	D-	C+	C	F	B+	D
-			Rhode Island	D+	F	C-	C-	D	C-	F	B	C
-			South Carolina	A	D+	D	D	A	C-	C-	B	C
-			South Dakota	C-	C	B	B+	F	F	B	C	B
-			Tennessee	B	B-	D	C	B	C	C-	B	B-
-			Texas	C	A	C-	A	B	A	C	C	A
-			Utah	C	C-	B+	A	C-	C	A	B-	B+
-			Vermont	C	D-	B	F	C	D	D	C-	C
-			Virginia	D	C	C	C-	D	B	C+	A	C
-			Washington	C+	C	A	F	C	A	C	A	B
-			West Virginia	C-	C-	F	F	B	D+	C	C	C-
-			Wisconsin	B+	B	B+	D	C	C+	D+	B	C+
-			Wyoming	D-	C	B-	D	D-	D	B+	D	C";
+
+		// Tab-delimited file
+		App::uses('File', 'Utility');
+		$file = new File(TMP.DS.'ConexusScorecard2015.txt');
+		$grades = $file->read();
 
 		return $this->__import($year, $columns, $grades);
 	}
