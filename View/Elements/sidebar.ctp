@@ -63,8 +63,11 @@
 	</h4>
 	<ul class="inline">
 		<li>
-			<?php echo $this->Html->link('2014', '/files/National2014.pdf'); ?>
+			<?php echo $this->Html->link('2015', '/files/National2015.pdf'); ?>
 		</li>
+		<li>
+            <?php echo $this->Html->link('2014', '/files/National2014.pdf'); ?>
+        </li>
 		<li>
 			<?php echo $this->Html->link('2013', '/files/National2013.pdf'); ?>
 		</li>
@@ -93,8 +96,11 @@
 	</h4>
 	<ul class="inline">
 		<li>
-			<?php echo $this->Html->link('2014', '/files/Indiana2014.pdf'); ?>
+			<?php echo $this->Html->link('2015', '/files/Indiana2015.pdf'); ?>
 		</li>
+		<li>
+            <?php echo $this->Html->link('2014', '/files/Indiana2014.pdf'); ?>
+        </li>
 		<li>
 			<?php echo $this->Html->link('2013', '/files/Indiana2013.pdf'); ?>
 		</li>
@@ -119,8 +125,11 @@
 		Spreadsheets (XLSX)
 	</h4>
 	<ul class="inline">
+        <li>
+            <?php echo $this->Html->link('2015', '/files/Scorecard 2015.xlsx'); ?>
+        </li>
 		<li>
-			<?php echo $this->Html->link('2014', '/files/Scorecard 2014.xlsx'); ?>
+			<?php echo $this->Html->link('2014', '/files/Scorecard2014.xlsx'); ?>
 		</li>
 	</ul>
 
@@ -128,6 +137,9 @@
 		Related Studies (PDF)
 	</h4>
 	<ul>
+        <li>
+            <?php echo $this->Html->link('The Myth and the Reality of Manufacturing in America (2015)', '/files/MfgReality.pdf'); ?>
+        </li>
 		<li>
 			<?php echo $this->Html->link('Manufacturing and Labor Market Frictions (2014)', '/files/MfgLaborMktFrictions.pdf'); ?>
 		</li>

@@ -1,49 +1,49 @@
 <h1 class="page_title">
-	Conexus Indiana 2014 Manufacturing and Logistics National Report
+	Conexus Indiana 2015 Manufacturing and Logistics National Report
 </h1>
 <p>
-	The 2014 Manufacturing and Logistics National Report shows how each state ranks among its peers in several areas of the economy that underlie the success of manufacturing and logistics.
+	The 2015 Manufacturing and Logistics National Report shows how each state ranks among its peers in several areas of the economy that underlie the success of manufacturing and logistics.
 </p>
 <p>
 	These specific measures include: manufacturing and logistics industry health, human capital, cost of worker benefits, diversification of the industries, state-level productivity and innovation, expected fiscal liability, tax climate, and global reach.
 </p>
 
 <div id="downloads_screenshots">
-	<a href="/files/National2014.pdf">
-		<img src="/img/Conexus2014-US.jpg" />
+	<a href="/files/National2015.pdf">
+		<img src="/img/Conexus2015US.jpg" />
 		<br />
 		<span>
-			2014 National
+			2015 National
 			<br />
 			Report Card (PDF)
 		</span>
 	</a>
-	<a href="/files/Indiana2014.pdf">
-		<img src="/img/Conexus2014-IN.jpg" />
+	<a href="/files/Indiana2015.pdf">
+		<img src="/img/Conexus2015IN.jpg" />
 		<br />
 		<span>
-			2014 Indiana
+			2015 Indiana
 			<br />
 			Report Card (PDF)
 		</span>
 	</a>
-	<a href="/files/MfgLaborMktFrictions.pdf">
-		<img src="/img/MfgLaborMktFrictions.jpg" />
+	<a href="/files/MfgReality.pdf">
+		<img src="/img/Conexus2015MfgReality.jpg" />
 		<br />
 		<span>
-			Manufacturing and Labor
-			<br />
-			Market Frictions (June 2014, PDF)
+			The Myth and the Reality of
+			<br />Manufacturing in America
+			<br />(June 2015, PDF)
 		</span>
 	</a>
-	<a href="/files/EvaluatingMfgScorecard2014.pdf">
-		<img src="/img/EvaluatingMfgScorecard2014.jpg" />
-		<br />
-		<span>
-			Evaluating the Scorecard <br />
-			(June 2014, PDF)
-		</span>
-	</a>
+	<a href="/files/Scorecard2015.xlsx">
+        <img src="/img/Conexus2015Data.jpg" />
+        <br />
+        <span>
+            Evaluating the Scorecard <br />
+            (June 2014, PDF)
+        </span>
+    </a>
 </div>
 
 
