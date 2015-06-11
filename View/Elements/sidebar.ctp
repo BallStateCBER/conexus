@@ -126,7 +126,7 @@
 	</h4>
 	<ul class="inline">
         <li>
-            <?php echo $this->Html->link('2015', '/files/Scorecard 2015.xlsx'); ?>
+            <?php echo $this->Html->link('2015', '/files/Scorecard2015.xlsx'); ?>
         </li>
 		<li>
 			<?php echo $this->Html->link('2014', '/files/Scorecard2014.xlsx'); ?>

@@ -40,8 +40,8 @@
         <img src="/img/Conexus2015Data.jpg" />
         <br />
         <span>
-            Evaluating the Scorecard <br />
-            (June 2014, PDF)
+            2015 Scorecard<br />
+            (June 2015, XLSX)
         </span>
     </a>
 </div>
