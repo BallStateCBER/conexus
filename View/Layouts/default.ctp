@@ -25,5 +25,8 @@
 	// Being phased out in favor of HTML5 Google Charts
 	//$this->Html->script('gchart/jquery.gchart.min.js', array('inline' => false));
 
-	echo $this->element('flash_messages', array(), array('plugin' => 'DataCenter'));
+	$this->start('flash_messages');
+	    echo $this->element('flash_messages', array(), array('plugin' => 'DataCenter'));
+    $this->end();
+
 	echo '<div id="content">'.$this->fetch('content').'</div>';
