@@ -1,7 +1,7 @@
 <h1 class="page_title">
 	<?php echo $title_for_layout; ?>
 </h1>
-<?php 
+<?php
 	$sources = array(
 		'U.S. Department of the Census' => 'http://www.census.gov',
 		'U.S. Department of Transportation Center for Transportation Statistics' => 'http://www.bts.gov/',
@@ -11,10 +11,10 @@
 		'Tax Foundation' => 'http://taxfoundation.org',
 		'U.S. Internal Revenue Service' => 'http://www.irs.gov',
 		'Boston College Center for Retirement Research' => 'http://crr.bc.edu',
-		'U.S. Department of the Census 2012 Statistical Abstract' => 'http://www.census.gov/compendia/statab',
-		'U.S. Department of Commerce International Trade Administration' => 'http://trade.gov', 
+		'U.S. Department of the Census 2012 Statistical Abstract' => 'https://www.census.gov/library/publications/2011/compendia/statab/131ed.html',
+		'U.S. Department of Commerce International Trade Administration' => 'http://trade.gov',
 		'U.S. Bureau of Economic Analysis' => 'http://www.bea.gov',
-		'North American Industrial Classification System (NAICS)' => 'http://www.census.gov/eos/www/naics/', 
+		'North American Industrial Classification System (NAICS)' => 'http://www.census.gov/eos/www/naics/',
 		'Census of Manufacturers' => 'http://www.census.gov/manufacturing/asm/',
 		'National Science Foundation' => 'http://www.nsf.gov',
 		'U.S. Patent and Trademark Office' => 'http://www.uspto.gov'
