@@ -162,11 +162,11 @@ class GradesController extends AppController {
             2,  // Logistics Industry
             3,  // Human Capital
             4,  // Benefits Costs
-            5,  // Global Position
-            6,  // Productivity and Innovation
-            7,  // Tax Climate
+            7,  // Global Position
+            9,  // Productivity and Innovation
+            5,  // Tax Climate
             8,  // Diversification
-            9   // Expected Fiscal Liability Gap
+            6   // Expected Fiscal Liability Gap
         );
 
         // Tab-delimited file
