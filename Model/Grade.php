@@ -8,7 +8,7 @@ App::uses('AppModel', 'Model');
  */
 class Grade extends AppModel {
 	public $actAs = array('Containable');
-	
+
 /**
  * Validation rules
  *
@@ -47,7 +47,7 @@ class Grade extends AppModel {
 		),
 		'grade' => array(
 			'notempty' => array(
-				'rule' => array('notempty'),
+				'rule' => array('notBlank'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
