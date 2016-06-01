@@ -62,30 +62,11 @@
 		National Report Cards (PDF)
 	</h4>
 	<ul class="inline">
-		<li>
-            <?php echo $this->Html->link('2016', '/files/National2016.pdf'); ?>
-        </li>
-		<li>
-			<?php echo $this->Html->link('2015', '/files/National2015.pdf'); ?>
-		</li>
-		<li>
-            <?php echo $this->Html->link('2014', '/files/National2014.pdf'); ?>
-        </li>
-		<li>
-			<?php echo $this->Html->link('2013', '/files/National2013.pdf'); ?>
-		</li>
-		<li>
-			<?php echo $this->Html->link('2012', '/files/National2012.pdf'); ?>
-		</li>
-		<li>
-			<?php echo $this->Html->link('2011', '/files/National2011.pdf'); ?>
-		</li>
-		<li>
-			<?php echo $this->Html->link('2010', '/files/National2010.pdf'); ?>
-		</li>
-		<li>
-			<?php echo $this->Html->link('2009', '/files/National2009.pdf'); ?>
-		</li>
+	    <?php for ($year = 2016; $year >= 2009; $year--): ?>
+    		<li>
+                <?php echo $this->Html->link($year, "/files/National$year.pdf"); ?>
+            </li>
+        <?php endfor; ?>
 		<li>
 			<?php echo $this->Html->link('2008 Analysis', '/files/National2008-1.pdf'); ?>
 		</li>
@@ -98,33 +79,11 @@
 		Indiana Report Cards (PDF)
 	</h4>
 	<ul class="inline">
-		<li>
-            <?php echo $this->Html->link('2016', '/files/Indiana2016.pdf'); ?>
-        </li>
-		<li>
-			<?php echo $this->Html->link('2015', '/files/Indiana2015.pdf'); ?>
-		</li>
-		<li>
-            <?php echo $this->Html->link('2014', '/files/Indiana2014.pdf'); ?>
-        </li>
-		<li>
-			<?php echo $this->Html->link('2013', '/files/Indiana2013.pdf'); ?>
-		</li>
-		<li>
-			<?php echo $this->Html->link('2012', '/files/Indiana2012.pdf'); ?>
-		</li>
-		<li>
-			<?php echo $this->Html->link('2011', '/files/Indiana2011.pdf'); ?>
-		</li>
-		<li>
-			<?php echo $this->Html->link('2010', '/files/Indiana2010.pdf'); ?>
-		</li>
-		<li>
-			<?php echo $this->Html->link('2009', '/files/Indiana2009.pdf'); ?>
-		</li>
-		<li>
-			<?php echo $this->Html->link('2008', '/files/Indiana2008.pdf'); ?>
-		</li>
+	    <?php for ($year = 2016; $year >= 2008; $year--): ?>
+    		<li>
+                <?php echo $this->Html->link($year, "/files/Indiana$year.pdf"); ?>
+            </li>
+        <?php endfor; ?>
 	</ul>
 
 	<h4>
