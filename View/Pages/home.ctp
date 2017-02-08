@@ -1,47 +1,47 @@
 <h1 class="page_title">
-	Conexus Indiana 2015 Manufacturing and Logistics National Report
+	Conexus Indiana 2016 Manufacturing and Logistics National Report
 </h1>
 <p>
-	The 2015 Manufacturing and Logistics National Report shows how each state ranks among its peers in several areas of the economy that underlie the success of manufacturing and logistics.
+	The 2016 Manufacturing and Logistics National Report shows how each state ranks among its peers in several areas of the economy that underlie the success of manufacturing and logistics.
 </p>
 <p>
 	These specific measures include: manufacturing and logistics industry health, human capital, cost of worker benefits, diversification of the industries, state-level productivity and innovation, expected fiscal liability, tax climate, and global reach.
 </p>
 
 <div id="downloads_screenshots">
-	<a href="/files/National2015.pdf">
-		<img src="/img/Conexus2015US.jpg" />
+	<a href="/files/National2016.pdf">
+		<img src="/img/Conexus2016US.png" />
 		<br />
 		<span>
-			2015 National
+			2016 National
 			<br />
 			Report Card (PDF)
 		</span>
 	</a>
-	<a href="/files/Indiana2015.pdf">
-		<img src="/img/Conexus2015IN.jpg" />
+	<a href="/files/Indiana2016.pdf">
+		<img src="/img/Conexus2016IN.png" />
 		<br />
 		<span>
-			2015 Indiana
+			2016 Indiana
 			<br />
 			Report Card (PDF)
 		</span>
 	</a>
-	<a href="/files/MfgReality.pdf">
-		<img src="/img/Conexus2015MfgReality.jpg" />
+	<a href="/files/Conexus2016-AdvMfg.pdf">
+		<img src="/img/Conexus2016-AdvMfg.png" />
 		<br />
 		<span>
-			The Myth and the Reality of
-			<br />Manufacturing in America
-			<br />(June 2015, PDF)
+			Advanced Manufacturing
+			<br />in the United States
+			<br />(June 2016, PDF)
 		</span>
 	</a>
-	<a href="/files/Scorecard2015.xlsx">
-        <img src="/img/Conexus2015Data.jpg" />
+	<a href="/files/Scorecard2016.xlsx">
+        <img src="/img/Conexus2016Data.jpg" />
         <br />
         <span>
-            2015 Scorecard<br />
-            (June 2015, XLSX)
+            2016 Scorecard<br />
+            (June 2016, XLSX)
         </span>
     </a>
 </div>
