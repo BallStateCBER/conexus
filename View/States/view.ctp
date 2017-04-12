@@ -42,32 +42,45 @@
 <table class="report_card">
 	<thead>
 		<tr>
-			<td></td>
 			<?php foreach ($years as $year): ?>
-				<th><?php echo $year; ?></th>
+				<th>
+                    '<?= substr($year, 2); ?>
+                </th>
 			<?php endforeach; ?>
+            <td></td>
 		</tr>
 	</thead>
 	<tbody>
 		<?php foreach ($categories_list as $cat_id => $cat_name): ?>
 			<tr>
-				<th>
-					<?php echo $this->Html->link(
-						$cat_name, 
-						array(
-							'controller' => 'categories', 
-							'action' => 'view', 
-							'cat_slug' => Inflector::slug($cat_name)
-						)
-					); ?>
-				</th>
-				<?php foreach ($years as $year): ?>
-					<?php if (isset($grades[$cat_id][$year])): ?>
-						<td><?php echo $grades[$cat_id][$year]; ?></td>
-					<?php else: ?>
-						<td class="na">n/a</td>
-					<?php endif; ?>
+				<?php foreach ($years as $key => $year): ?>
+                    <?php
+                        $class = '';
+                        if (! isset($grades[$cat_id][$year])) {
+                            $class .= 'na ';
+                        }
+                        if ($key == count($years) - 1) {
+                            $class .= 'current';
+                        }
+                    ?>
+                    <td class="<?= $class ?>">
+                        <?php if (isset($grades[$cat_id][$year])): ?>
+                            <?= $grades[$cat_id][$year]; ?>
+                        <?php else: ?>
+                            n/a
+                        <?php endif; ?>
+                    </td>
 				<?php endforeach; ?>
+                <th>
+                    <?php echo $this->Html->link(
+                        $cat_name,
+                        array(
+                            'controller' => 'categories',
+                            'action' => 'view',
+                            'cat_slug' => Inflector::slug($cat_name)
+                        )
+                    ); ?>
+                </th>
 			</tr>
 		<?php endforeach; ?>
 	</tbody>

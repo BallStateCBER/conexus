@@ -6,13 +6,20 @@ table.report_card {
 	.na {
 		color: #999;
 	}
+    thead {
+        text-align: left;
+    }
 	tbody {
 		th {
 			font-weight: normal;
 			text-align: left;
 		}
 		td {
-			text-align: center;
+			text-align: left;
+
+			&.current {
+				font-weight: bold;
+			}
 		}
 		tr:nth-child(odd) {
 			background-color: #ddd;
