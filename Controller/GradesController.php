@@ -164,6 +164,112 @@ class GradesController extends AppController {
 		return $this->render('DataCenter.Common/message');
 	}
 
+    public function import_2017()
+    {
+        $year = 2017;
+
+        // Tab-delimited file
+        App::uses('File', 'Utility');
+        $file = new File(TMP . DS . 'ConexusScorecard2017.txt');
+        $fileContents = $file->read();
+
+        $rows = explode("\n", $fileContents);
+
+        App::uses('Category', 'Model');
+        $Category = new Category();
+        $categories = $Category->find('list');
+
+        App::uses('State', 'Model');
+        $State = new State();
+
+        $categoryIds = [
+            'Manufacturing' => 1,
+            'Logistics' => 2,
+            'Human Capital' => 3,
+            'Benefits Costs' => 4,
+            'Global Position' => 7,
+            'Productivity and Innovation' => 9,
+            'Tax Climate' => 5,
+            'Diversification' => 8,
+            'Expected Fiscal Liability Gap' => 6
+        ];
+
+        $message = 'Importing grades:<table>';
+        foreach ($rows as $row) {
+            $row = trim($row);
+            if (empty($row)) {
+                continue;
+            }
+
+            $fields = explode("\t", $row);
+
+            $subcategory = trim($fields[2]);
+            if ($subcategory != 'Final Results') {
+                continue;
+            }
+
+            $stateName = trim($fields[0]);
+            $stateId = $State->field('id', array('name' => $stateName));
+            if (!$stateId) {
+                $message .= '<tr>' .
+                    "<td>$year</td>" .
+                    "<td>$stateName not a recognized state</td>" .
+                    "<td></td><td></td><td></td>" .
+                    "</tr>";
+                continue;
+            }
+
+            $categoryName = $fields[1];
+            $categoryId = $categoryIds[$categoryName];
+            $grade = $fields[7];
+
+            // Look for an existing entry for this grade
+            $existing = $this->Grade->find('all', [
+                'conditions' => [
+                    'category_id' => $categoryId,
+                    'state_id' => $stateId,
+                    'year' => $year
+                ]
+            ]);
+
+            if (count($existing)) {
+                $existingGrade = $existing[0]['Grade']['grade'];
+                if ($existingGrade == $grade) {
+                    $result = 'Already imported';
+                } else {
+                    $this->Grade->id = $existing[0]['Grade']['id'];
+                    $this->Grade->set(['grade' => $grade]);
+                    if ($this->Grade->save()) {
+                        $result = 'Updated value';
+                    } else {
+                        $result = 'Error updating value';
+                    }
+                }
+            } else {
+                $this->Grade->create([
+                    'Grade' => [
+                        'category_id' => $categoryId,
+                        'state_id' => $stateId,
+                        'year' => $year,
+                        'grade' => $grade
+                    ]
+                ]);
+                $result = $this->Grade->save() ? 'Imported' : 'Error importing';
+            }
+
+            $message .= '<tr>' .
+                "<td>$year</td>" .
+                "<td>$stateName</td>" .
+                "<td>$categories[$categoryId] (#$categoryId)</td>" .
+                "<td>$grade</td>" .
+                "<td>$result</td>" .
+                '</tr>';
+        }
+
+        $this->set('message', $message . '</table>');
+        return $this->render('DataCenter.Common/message');
+    }
+
     public function import_2016() {
         $year = 2016;
 
