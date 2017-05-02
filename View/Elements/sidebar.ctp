@@ -109,7 +109,7 @@
             <?php echo $this->Html->link('Advanced Manufacturing in the United States (2016)', '/files/Conexus2016-AdvMfg.pdf'); ?>
         </li>
         <li>
-            <?php echo $this->Html->link('The Myth and the Reality of Manufacturing in America (2015)', '/files/MfgReality.pdf'); ?>
+            <?php echo $this->Html->link('The Myth and the Reality of Manufacturing in America (2017)', '/files/MfgReality.pdf'); ?>
         </li>
 		<li>
 			<?php echo $this->Html->link('Manufacturing and Labor Market Frictions (2014)', '/files/MfgLaborMktFrictions.pdf'); ?>
