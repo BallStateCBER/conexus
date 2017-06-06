@@ -112,6 +112,5 @@
 			<strong>GPA Key</strong>:
 			4 = A; 3 = B; 2 = C; 1 = D; 0 = F
 		</p>
-		<br class="clear" />
 	</div>
 <?php endforeach; ?>
