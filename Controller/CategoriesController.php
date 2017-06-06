@@ -22,7 +22,7 @@ class CategoriesController extends AppController {
 			throw new NotFoundException(__('Invalid category'));
 		}
 
-		$year = 2017;
+		$year = RELEASE2017 ? 2017 : 2016;
 
 		App::uses('Grade', 'Model');
 		$Grade = new Grade();

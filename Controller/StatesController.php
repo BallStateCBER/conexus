@@ -93,7 +93,7 @@ class StatesController extends AppController {
 		$this->set(compact('abbreviation', 'state', 'grades', 'categories', 'charts'));
 		$this->set(array(
 			'title_for_layout' => $state['State']['name'],
-			'years' => range(2009, 2017)
+			'years' => range(2009, RELEASE2017 ? 2017 : 2016)
 		));
 	}
 }

@@ -98,16 +98,22 @@ ul.misc_links {
   margin: 15px 0;
   text-align: center;
 }
-#downloads_screenshots a {
+#downloads_screenshots > a,
+#downloads_screenshots > span {
   display: inline-block;
   padding: 0 15px;
   text-decoration: none;
   vertical-align: top;
 }
-#downloads_screenshots a:hover img {
+#downloads_screenshots > a:hover img,
+#downloads_screenshots > span:hover img {
   -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+#downloads_screenshots > a > a:hover,
+#downloads_screenshots > span > a:hover {
+  text-decoration: underline;
 }
 #downloads_screenshots a:hover span {
   text-decoration: underline;
