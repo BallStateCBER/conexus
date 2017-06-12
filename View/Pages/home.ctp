@@ -10,7 +10,7 @@
 
 <div id="downloads_screenshots">
     <?php if (RELEASE2017): ?>
-        <a href="/files/Conexus2017-USA.pdf">
+        <a href="/files/National2017.pdf">
             <img src="/img/Conexus2017-USA.png" />
             <br />
             <span>
@@ -19,7 +19,7 @@
                 Report Card (PDF)
             </span>
         </a>
-        <a href="/files/Conexus2017-IN.pdf">
+        <a href="/files/Indiana2017.pdf">
             <img src="/img/Conexus2017-IN.png" />
             <br />
             <span>
