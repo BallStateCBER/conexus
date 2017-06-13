@@ -55,8 +55,7 @@ class AppController extends Controller {
 			'contain' => false
 		));
 
-		$release2017Data = isset($_GET['test']) || (date('Y-m-d H:i') >= '2017-06-09 07:00');
-        define('RELEASE2017', $release2017Data);
+        define('RELEASE_YEAR', 2017);
 	}
 
 	function beforeRender() {

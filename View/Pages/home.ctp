@@ -1,85 +1,47 @@
 <h1 class="page_title">
-	Conexus Indiana <?= RELEASE2017 ? 2017 : 2016 ?> Manufacturing and Logistics National Report
+	Conexus Indiana <?= RELEASE_YEAR ?> Manufacturing and Logistics National Report
 </h1>
 <p>
-	The <?= RELEASE2017 ? 2017 : 2016 ?> Manufacturing and Logistics National Report shows how each state ranks among its peers in several areas of the economy that underlie the success of manufacturing and logistics.
+	The <?= RELEASE_YEAR ?> Manufacturing and Logistics National Report shows how each state ranks among its peers in several areas of the economy that underlie the success of manufacturing and logistics.
 </p>
 <p>
 	These specific measures include: manufacturing and logistics industry health, human capital, cost of worker benefits, diversification of the industries, state-level productivity and innovation, expected fiscal liability, tax climate, and global reach.
 </p>
 
 <div id="downloads_screenshots">
-    <?php if (RELEASE2017): ?>
-        <a href="/files/National2017.pdf">
-            <img src="/img/Conexus2017-USA.png" />
-            <br />
-            <span>
-                2017 National
-                <br />
-                Report Card (PDF)
-            </span>
-        </a>
-        <a href="/files/Indiana2017.pdf">
-            <img src="/img/Conexus2017-IN.png" />
-            <br />
-            <span>
-                2017 Indiana
-                <br />
-                Report Card (PDF)
-            </span>
-        </a>
-        <a href="/files/Conexus2017-Volatility.pdf">
-            <img src="/img/Conexus2017-Volatility.png" />
-            <br />
-            <span>
-                2017 Companion Report: <br />
-                Industry Volatility & Growth (PDF)
-            </span>
-        </a>
+    <a href="/files/National2017.pdf">
+        <img src="/img/Conexus2017-USA.png" />
+        <br />
         <span>
-            <img src="/img/Conexus2017-Data.png" />
+            2017 National
             <br />
-            2017 Scorecard
-            <br />
-            (<a href="/files/Scorecard2017.xlsx">XLSX</a> or <a href="/files/Scorecard2017.ods">OSD</a>)
+            Report Card (PDF)
         </span>
-    <?php else: ?>
-        <a href="/files/National2016.pdf">
-            <img src="/img/Conexus2016US.png" />
+    </a>
+    <a href="/files/Indiana2017.pdf">
+        <img src="/img/Conexus2017-IN.png" />
+        <br />
+        <span>
+            2017 Indiana
             <br />
-            <span>
-                2016 National
-                <br />
-                Report Card (PDF)
-            </span>
-        </a>
-        <a href="/files/Indiana2016.pdf">
-            <img src="/img/Conexus2016IN.png" />
-            <br />
-            <span>
-                2016 Indiana
-                <br />
-                Report Card (PDF)
-            </span>
-        </a>
-        <a href="/files/Conexus2016-AdvMfg.pdf">
-            <img src="/img/Conexus2016-AdvMfg.png" />
-            <br />
-            <span>
-                Advanced Manufacturing
-                <br />in the United States
-                <br />(June 2016, PDF)
-            </span>
-        </a>
-        <a href="/files/Scorecard2016.xlsx">
-            <img src="/img/Conexus2016Data.jpg" />
-            <br />
-            <span>
-                2016 Scorecard<br />
-                (June 2016, XLSX)
-            </span>
-        </a>
-    <?php endif; ?>
+            Report Card (PDF)
+        </span>
+    </a>
+    <a href="/files/Conexus2017-Volatility.pdf">
+        <img src="/img/Conexus2017-Volatility.png" />
+        <br />
+        <span>
+            2017 Companion Report: <br />
+            Industry Volatility & Growth (PDF)
+        </span>
+    </a>
+    <span>
+        <img src="/img/Conexus2017-Data.png" />
+        <br />
+        2017 Scorecard
+        <br />
+        (<a href="/files/Scorecard2017.xlsx">XLSX</a> or <a href="/files/Scorecard2017.ods">OSD</a>)
+    </span>
 </div>
 
 

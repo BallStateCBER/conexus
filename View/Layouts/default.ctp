@@ -6,7 +6,7 @@
 	$this->start('subsite_title');
 		echo '<h1 id="subsite_title" class="max_width">';
 		echo $this->Html->link(
-			'<img src="/img/Conexus.' . (RELEASE2017 ? 'jpg' : 'png') . '" alt="Manufacturing and Logistics National Report, Sponsored by Conexus Indiana" />',
+			'<img src="/img/Conexus.jpg" alt="Manufacturing and Logistics National Report, Sponsored by Conexus Indiana" />',
 			array('controller' => 'pages', 'action' => 'home'),
 			array('escape' => false)
 		);

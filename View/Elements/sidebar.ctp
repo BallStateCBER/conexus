@@ -62,7 +62,7 @@
 		National Report Cards (PDF)
 	</h4>
 	<ul class="inline">
-	    <?php for ($year = (RELEASE2017 ? 2017 : 2016); $year >= 2009; $year--): ?>
+	    <?php for ($year = RELEASE_YEAR; $year >= 2009; $year--): ?>
     		<li>
                 <?php echo $this->Html->link($year, "/files/National$year.pdf"); ?>
             </li>
@@ -79,7 +79,7 @@
 		Indiana Report Cards (PDF)
 	</h4>
 	<ul class="inline">
-	    <?php for ($year = (RELEASE2017 ? 2017 : 2016); $year >= 2008; $year--): ?>
+	    <?php for ($year = RELEASE_YEAR; $year >= 2008; $year--): ?>
     		<li>
                 <?php echo $this->Html->link($year, "/files/Indiana$year.pdf"); ?>
             </li>
@@ -90,11 +90,9 @@
 		Spreadsheets (XLSX)
 	</h4>
 	<ul class="inline">
-        <?php if (RELEASE2017): ?>
-            <li>
-                <?php echo $this->Html->link('2017', '/files/Scorecard2017.xlsx'); ?>
-            </li>
-        <?php endif; ?>
+        <li>
+            <?php echo $this->Html->link('2017', '/files/Scorecard2017.xlsx'); ?>
+        </li>
         <li>
             <?php echo $this->Html->link('2016', '/files/Scorecard2016.xlsx'); ?>
         </li>
@@ -110,11 +108,9 @@
 		Related Studies (PDF)
 	</h4>
 	<ul>
-        <?php if (RELEASE2017): ?>
-            <li>
-                <?php echo $this->Html->link('Manufacturing & Logistics: A Generation of Volatility & Growth (2017)', '/files/Conexus2017-Volatility.pdf'); ?>
-            </li>
-        <?php endif; ?>
+        <li>
+            <?php echo $this->Html->link('Manufacturing & Logistics: A Generation of Volatility & Growth (2017)', '/files/Conexus2017-Volatility.pdf'); ?>
+        </li>
         <li>
             <?php echo $this->Html->link('Advanced Manufacturing in the United States (2016)', '/files/Conexus2016-AdvMfg.pdf'); ?>
         </li>

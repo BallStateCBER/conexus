@@ -22,12 +22,10 @@ class CategoriesController extends AppController {
 			throw new NotFoundException(__('Invalid category'));
 		}
 
-		$year = RELEASE2017 ? 2017 : 2016;
-
 		App::uses('Grade', 'Model');
 		$Grade = new Grade();
 		$grades = $Grade->find('all', array(
-			'conditions' => array('year' => $year, 'category_id' => $id),
+			'conditions' => array('year' => RELEASE_YEAR, 'category_id' => $id),
 			'fields' => array('grade'),
 			'contain' => array('State' => array('abbreviation', 'name')),
 			'order' => 'State.name ASC'
@@ -42,7 +40,7 @@ class CategoriesController extends AppController {
 		$this->set(array(
 			'title_for_layout' => $this->Category->field('name'),
 			'category' => $this->Category->read(null, $id),
-			'year' => $year,
+			'year' => RELEASE_YEAR,
 			'js_grade_definitions' => $js_grade_definitions,
 			'grades' => $grades
 		));
