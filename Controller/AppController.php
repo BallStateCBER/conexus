@@ -39,15 +39,11 @@ class AppController extends Controller {
 	);
 	public $components = array(
 		'DebugKit.Toolbar',
-		'DataCenter.Flash',
-        'Security'
+		'DataCenter.Flash'
 	);
 	public $categories = array();
 
 	function beforeFilter() {
-        $this->Security->blackHoleCallback = 'forceSSL';
-        $this->Security->requireSecure();
-
 		App::uses('Category', 'Model');
 		$Category = new Category();
 		$this->categories = $Category->find('list');
@@ -70,14 +66,4 @@ class AppController extends Controller {
 			));
 		}
 	}
-
-    /**
-     * Redirects the current request to HTTPS
-     *
-     * @return mixed
-     */
-    public function forceSSL()
-    {
-        return $this->redirect('https://' . env('SERVER_NAME') . $this->here);
-    }
 }
