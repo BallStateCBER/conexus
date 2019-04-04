@@ -87,9 +87,12 @@
 	</ul>
 
 	<h4>
-		Spreadsheets (XLSX)
+		Spreadsheets
 	</h4>
 	<ul class="inline">
+        <li>
+            <?php echo $this->Html->link('2018', '/files/Scorecard2018.csv'); ?>
+        </li>
         <li>
             <?php echo $this->Html->link('2017', '/files/Scorecard2017.xlsx'); ?>
         </li>

@@ -9,39 +9,31 @@
 </p>
 
 <div id="downloads_screenshots">
-    <a href="/files/National2017.pdf">
-        <img src="/img/Conexus2017-USA.png" />
+    <a href="/files/National<?= RELEASE_YEAR ?>.pdf">
+        <img src="/img/Conexus<?= RELEASE_YEAR ?>-USA.png" />
         <br />
         <span>
-            2017 National
+            2018 National
             <br />
             Report Card (PDF)
         </span>
     </a>
-    <a href="/files/Indiana2017.pdf">
-        <img src="/img/Conexus2017-IN.png" />
+    <a href="/files/Indiana<?= RELEASE_YEAR ?>.pdf">
+        <img src="/img/Conexus<?= RELEASE_YEAR ?>-IN.png" />
         <br />
         <span>
-            2017 Indiana
+            2018 Indiana
             <br />
             Report Card (PDF)
         </span>
     </a>
-    <a href="/files/Conexus2017-Volatility.pdf">
-        <img src="/img/Conexus2017-Volatility.png" />
+
+    <a href="/files/Scorecard<?= RELEASE_YEAR ?>.csv">
+        <img src="/img/Conexus<?= RELEASE_YEAR ?>-Data.png" />
         <br />
-        <span>
-            2017 Companion Report: <br />
-            Industry Volatility & Growth (PDF)
-        </span>
+        <?= RELEASE_YEAR ?> Scorecard
+        <br />
     </a>
-    <span>
-        <img src="/img/Conexus2017-Data.png" />
-        <br />
-        2017 Scorecard
-        <br />
-        (<a href="/files/Scorecard2017.xlsx">XLSX</a> or <a href="/files/Scorecard2017.ods">OSD</a>)
-    </span>
 </div>
 
 
