@@ -164,6 +164,30 @@ class GradesController extends AppController {
 		return $this->render('DataCenter.Common/message');
 	}
 
+    public function import_2019() {
+        $year = 2019;
+
+        // Category IDs corresponding to each column after state name in the $grades table
+        $columns = array(
+            1,  // Manufacturing Industry
+            2,  // Logistics Industry
+            3,  // Human Capital
+            4,  // Benefits Costs
+            7,  // Global Position
+            9,  // Productivity and Innovation
+            5,  // Tax Climate
+            8,  // Diversification
+            6   // Expected Fiscal Liability Gap
+        );
+
+        // Tab-delimited file
+        App::uses('File', 'Utility');
+        $file = new File(TMP.DS.'ConexusScorecard2019.txt');
+        $grades = $file->read();
+
+        return $this->__import($year, $columns, $grades);
+    }
+
     public function import_2018() {
         $year = 2018;
 
