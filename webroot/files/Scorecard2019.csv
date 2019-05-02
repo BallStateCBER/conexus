@@ -16,7 +16,7 @@ Indiana,A,A,C,B,A,C,A,C,C+
 Iowa,A,B,A,C-,C-,C-,F,C-,B-
 Kansas,B+,C+,C,C-,B-,C,C,C-,D
 Kentucky,A,A,D,B-,B+,C-,C-,C,F
-Louisiana,C,B,F,C+,C,D,D+,D,C
+Louisiana,C,B,F,C+,C,D+,D+,D,C
 Maine,C-,D-,B,D,F,D-,C,C,C
 Maryland,D,D,C,C,D,B,D,C-,C+
 Massachusetts,C,D,B,C,B,A,D,D+,C
@@ -32,20 +32,20 @@ New Jersey,D+,C+,C,D-,C,A,F,F,F
 New Mexico,F,F,F,C+,F,C,B,D-,D+
 New York,D-,C,C,D,C-,C+,D-,B,C
 North Carolina,C+,C,C,C,C+,A,B+,B+,A
-North Dakota,D,B,A,B,C-,D-,B,C,C-
+North Dakota,D,B,A,B,C-,D,B,C,C-
 Ohio,B,A,C,C-,B,C,C,B-,C
 Oklahoma,C,B-,D,C,D,F,B,C,C+
 Oregon,B-,C-,C-,D+,C,A,C,D,C
 Pennsylvania,C,A,C,D+,C,C,D,B+,D-
-Rhode Island,D+,F,C-,C-,F,C-,D,A,D
+Rhode Island,D,F,C-,C-,F,C-,D,A,D
 South Carolina,A,C-,F,C,A,C,C-,B,C
 South Dakota,C,C,B+,B+,D,D,B,C,A
 Tennessee,B,C+,D,A,B,C,C,B-,B
 Texas,C,A,D+,B-,A,C+,D+,C+,B+
 Utah,C,C-,B,A,C+,B,A,B,A
 Vermont,C,D-,B,F,B,C,D,C,C-
-Virginia,D,C,B-,C,D-,C,C,A,B-
+Virginia,D-,C,B-,C,D-,C,C,A,B-
 Washington,C-,C,A,F,C+,B,C-,A,B
 West Virginia,C,D+,F,F,C,D,C+,D+,D
 Wisconsin,B,B,B+,C,C,C-,C-,C+,B+
-Wyoming,N/A,C,B,F,C,D+,B+,N/A,C
+Wyoming,D+,C,B,F,C,D-,B+,F,C
