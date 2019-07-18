@@ -13,7 +13,7 @@
         <img src="/img/Conexus<?= RELEASE_YEAR ?>-USA.png" />
         <br />
         <span>
-            2018 National
+            <?= RELEASE_YEAR ?> National
             <br />
             Report Card (PDF)
         </span>
@@ -22,7 +22,7 @@
         <img src="/img/Conexus<?= RELEASE_YEAR ?>-IN.png" />
         <br />
         <span>
-            2018 Indiana
+            <?= RELEASE_YEAR ?> Indiana
             <br />
             Report Card (PDF)
         </span>
