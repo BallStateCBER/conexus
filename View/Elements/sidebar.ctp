@@ -91,6 +91,9 @@
 	</h4>
 	<ul class="inline">
         <li>
+            <?php echo $this->Html->link('2019', '/files/Scorecard2019.csv'); ?>
+        </li>
+        <li>
             <?php echo $this->Html->link('2018', '/files/Scorecard2018.csv'); ?>
         </li>
         <li>
