@@ -70,14 +70,14 @@
 	<ul class="inline">
 	    <?php for ($year = RELEASE_YEAR; $year >= 2009; $year--): ?>
     		<li>
-                <?= $this->Html->link($year, "/files/National$year.pdf") ?>
+                <?= $this->Html->link($year, "/files/Manufacturing and Logistics Scorecard - National - $year.pdf") ?>
             </li>
         <?php endfor; ?>
 		<li>
-			<?= $this->Html->link('2008 Analysis', '/files/National2008-1.pdf') ?>
+			<?= $this->Html->link('2008 Analysis', '/files/Manufacturing and Logistics Scorecard - National - 2008-1.pdf') ?>
 		</li>
 		<li>
-			<?= $this->Html->link('2008 Scorecard', '/files/National2008-2.pdf') ?>
+			<?= $this->Html->link('2008 Scorecard', '/files/Manufacturing and Logistics Scorecard - National - 2008-2.pdf') ?>
 		</li>
 	</ul>
 
@@ -87,7 +87,7 @@
 	<ul class="inline">
 	    <?php for ($year = RELEASE_YEAR; $year >= 2008; $year--): ?>
     		<li>
-                <?= $this->Html->link($year, "/files/Indiana$year.pdf") ?>
+                <?= $this->Html->link($year, "/files/Manufacturing and Logistics Scorecard - Indiana - $year.pdf") ?>
             </li>
         <?php endfor; ?>
 	</ul>
@@ -98,12 +98,12 @@
 	<ul class="inline">
         <?php for ($year = RELEASE_YEAR; $year >= 2018; $year--): ?>
             <li>
-                <?= $this->Html->link($year, "/files/Scorecard$year.csv") ?>
+                <?= $this->Html->link($year, "/files/Manufacturing and Logistics Scorecard - Scorecard - $year.csv") ?>
             </li>
         <?php endfor; ?>
         <?php for ($year = 2017; $year >= 2014; $year--): ?>
             <li>
-                <?= $this->Html->link($year, "/files/Scorecard$year.xlsx") ?>
+                <?= $this->Html->link($year, "/files/Manufacturing and Logistics Scorecard - Scorecard - $year.xlsx") ?>
             </li>
         <?php endfor; ?>
 	</ul>

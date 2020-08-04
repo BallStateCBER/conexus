@@ -9,7 +9,7 @@
 </p>
 
 <div id="downloads_screenshots">
-    <a href="/files/National<?= RELEASE_YEAR ?>.pdf">
+    <a href="/files/Manufacturing and Logistics Scorecard - National - <?= RELEASE_YEAR ?>.pdf">
         <img src="/img/Conexus<?= RELEASE_YEAR ?>-USA.png" />
         <br />
         <span>
@@ -18,7 +18,7 @@
             Report Card (PDF)
         </span>
     </a>
-    <a href="/files/Indiana<?= RELEASE_YEAR ?>.pdf">
+    <a href="/files/Manufacturing and Logistics Scorecard - Indiana - <?= RELEASE_YEAR ?>.pdf">
         <img src="/img/Conexus<?= RELEASE_YEAR ?>-IN.png" />
         <br />
         <span>
@@ -28,7 +28,7 @@
         </span>
     </a>
 
-    <a href="/files/Scorecard<?= RELEASE_YEAR ?>.csv">
+    <a href="/files/Manufacturing and Logistics Scorecard - Scorecard - <?= RELEASE_YEAR ?>.csv">
         <img src="/img/Conexus<?= RELEASE_YEAR ?>-Data.png" />
         <br />
         <?= RELEASE_YEAR ?> Scorecard
