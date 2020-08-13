@@ -1,0 +1,51 @@
+"State","Manufacturing","Logistics","Human Capital","Benefits Costs","Global Position","Productivity and Innovation","Tax Climate","Diversification","Expected Fiscal Liability Gap"
+Alabama,B,C,F,A,C,D,C-,B,C
+Alaska,F,C-,C,D,F,F,B-,F,F
+Arizona,C,D,D-,B,C,B-,B,D-,C-
+Arkansas,C,C,D,A,D,F,D-,C,C
+California,C,B-,C-,D,C,A,D,F,D
+Colorado,D,C-,B,B,D-,C+,C,C,C
+Connecticut,C+,D,B,C-,A,B+,D,F,D-
+Delaware,D,D-,C,D-,A,B,B-,C-,B
+Florida,D,C+,B,C+,D,C,A,B-,B
+Georgia,C-,B,D,C+,C,C,C-,B+,B+
+Hawaii,F,F,C,D+,F,F,C,D,D
+Idaho,B,D,C,C+,F,C+,C,F,B
+Illinois,C+,A,B-,D,C+,B-,D,C+,F
+Indiana,A,B+,C,B-,B+,C,A,C,C+
+Iowa,A,B,B+,D+,C-,C-,F,C-,B-
+Kansas,B+,C+,C,C,C+,C+,C,A,D
+Kentucky,A,A,D+,C+,A,D,C,C-,F
+Louisiana,C+,B,F,C,C,D,D,D,C
+Maine,C-,D-,B,D-,F,D-,D+,C,C
+Maryland,D,D,C,C,D+,B,D-,D+,C+
+Massachusetts,C-,D,B-,C,B,A,D,C-,C
+Michigan,A,C,D,C,B,A,B+,D,C
+Minnesota,B-,B+,A,B+,B-,B,F,C,B
+Mississippi,B+,C,D-,B,C,F,C+,A,D
+Missouri,C,C,C,B,C-,C-,A,B,B
+Montana,F,C-,C+,C-,D,D+,B+,C,F
+Nebraska,C,B,B+,C,D+,D-,C+,D,A
+Nevada,D-,D,C-,B+,C-,D+,C,C,C
+New Hampshire,B,F,A,C-,B,B+,C-,D,C-
+New Jersey,D+,C+,C,F,C,A,F,F,F
+New Mexico,F,F,F,B,C-,C,B,D+,D+
+New York,F,C,C-,D,D,C,F,B,C
+North Carolina,C,C,C,C,C+,A,B,B+,A
+North Dakota,D,B,A,A,D,D,B,C,C-
+Ohio,B,A,C-,D,B,C,C,B-,C
+Oklahoma,C,B-,D,C,C-,F,B,C+,C
+Oregon,B,D+,D+,D,B,B+,C,D-,C
+Pennsylvania,C,A,C,C-,C,C,D+,B,D-
+Rhode Island,D+,F,C-,C-,F,C-,D-,A,D+
+South Carolina,A,C-,F,C,A,C,C,B,C-
+South Dakota,C,C,B,B,D,D,B,C,A
+Tennessee,B-,C,D,A,B-,C,C,C+,B
+Texas,C,A,D,B-,A,C+,C-,C,B+
+Utah,C,C-,B,A,B,B,A,B,A
+Vermont,C,F,C,F,B+,C,D,C,C-
+Virginia,D-,C,C+,C,D-,C,C,A,B-
+Washington,C-,C,A,F,C,B,C-,A,B-
+West Virginia,C,C-,F,F,C,D,C+,C-,D
+Wisconsin,B,B,A,C,C,C-,C,C,A
+Wyoming,D+,C,B-,F,C,C-,A,D,C-
