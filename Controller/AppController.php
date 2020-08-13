@@ -55,7 +55,7 @@ class AppController extends Controller {
 			'contain' => false
 		));
 
-        define('RELEASE_YEAR', 2019);
+        define('RELEASE_YEAR', 2020);
 	}
 
 	function beforeRender() {
