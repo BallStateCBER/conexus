@@ -28,6 +28,7 @@ table.report_card tbody tr:nth-child(odd) {
 }
 .grade_graph aside {
   float: right;
+  margin-left: 1em;
   width: 260px;
 }
 .grade_graph > div {
@@ -42,6 +43,7 @@ table.report_card tbody tr:nth-child(odd) {
 }
 aside.about_state {
   float: right;
+  margin-left: 1em;
   width: 260px;
 }
 aside.about_state h2 {
